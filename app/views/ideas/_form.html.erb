@@ -1,10 +1,10 @@
-<%= form_for(@adventure) do |f| %>
-  <% if @adventure.errors.any? %>
+<%= form_for(@idea) do |f| %>
+  <% if @idea.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@adventure.errors.count, "error") %> prohibited this adventure from being saved:</h2>
+      <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
 
       <ul>
-      <% @adventure.errors.full_messages.each do |message| %>
+      <% @idea.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -22,10 +22,6 @@
   <div class="field">
     <%= f.label :picture %><br>
     <%= f.file_field :picture %>
-  </div>
-  <div class="field">
-    <%= f.label :visit %><br>
-    <%= f.date_select :visit %>
   </div>
   <div class="actions">
     <%= f.submit %>
